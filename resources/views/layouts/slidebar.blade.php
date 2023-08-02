@@ -37,8 +37,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
 
-                <a class="collapse-item" href="cards.html">Reporte De Eventos Adversos A Medicamentos</a>
-                <a class="collapse-item" href="cards.html">Reporte De Eventos Adversos</a>
+                <a href="/reporte-EAM">Reporte De Eventos Adversos A Medicamentos</a>
+                <a href="/reporte-ADR">Reporte De Eventos Adversos</a>
             </div>
         </div>
     </li>
@@ -53,18 +53,18 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="utilities-color.html">Clasificar Reporte <br> Intrainstitucional</a>
-                <a class="collapse-item" href="utilities-border.html">Análisis de Eventos <br>
+                <a href="/clasi-Rep-Intra">Clasificar Reporte Intrainstitucional</a>
+                <a href="/ae-Adversos">Análisis de Eventos
                     Adversos</a>
-                <a class="collapse-item" href="utilities-animation.html">Reporte Extrainstitucional</a>
-                <a class="collapse-item" href="utilities-other.html">Acciones
+                <a href="/reporte-Extra-Ins">Reporte Extrainstitucional</a>
+                <a href="/acci-Mejora">Acciones
                     de Mejora</a>
-                <a class="collapse-item" href="utilities-other.html">Consultar
+                <a  href="/consu-Parame">Consultar
                     Parametrización</a>
-                <a class="collapse-item" href="utilities-animation.html">Información
+                <a href="/info-Gral">Información
                     General</a>
-                <a class="collapse-item" href="utilities-border.html">Pista de Auditoria</a>
-                <a class="collapse-item" href="utilities-color.html">Tecnovigilancia</a>
+                <a  href="/pista-Aud">Pista de Auditoria</a>
+                <a  href="/tecno-Vig">Tecnovigilancia</a>
             </div>
         </div>
     </li>
@@ -85,25 +85,16 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header"></h6>
-                <a class="collapse-item" href="login.html">Ingresar</a>
-                <a class="collapse-item" href="register.html">Registrar</a>
-                <a class="collapse-item" href="forgot-password.html">Cambiar Contraseña</a>
+                <a href="/registrar">Registrar</a>
+                <a  href="/cambiar-Contra">Cambiar Contraseña</a>
                 <div class="collapse-divider"></div>
-                <a class="collapse-item" href="utilities-other.html">Mas Configuraciones</a>
-                <a class="collapse-item" href="utilities-other.html">Eliminacion De Datos</a>
+                <a href="/mas-Conf">Mas Configuraciones</a>
+                <a href="/elim-Datos">Eliminacion De Datos</a>
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tablas Reporte</span>
-        </a>
-    </li>
-
+ 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
