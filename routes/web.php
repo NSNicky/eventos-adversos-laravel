@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\UserLogin;
+use App\Http\Middleware\UserAuth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,63 +15,79 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+//Login routes
+Route::middleware([UserAuth::class])->group(function () {
+
+    Route::get('/', function () {
+        return view('login');
+    });
+    
+    Route::post('user-login', [UserController::class, 'login']);
+
 });
 
-Route::get('/inicio', function () {
-    return view('home');
-});
+//------------
 
-Route::get('/reporte-EAM', function () {
-    return view('adrMed');
-});
+Route::middleware([UserLogin::class])->group(function () {
 
-Route::get('/clasi-Rep-Intra', function () {
-    return view('classyIntraInstRep');
-});
+    //Logout user
+    Route::get('/logout', [UserController::class, 'logout']);
 
-Route::get('/ae-Adversos', function () {
-    return view('AdverEventsAnaly');
-});
+    Route::get('/inicio', function () {
+        return view('home');
+    });
 
-Route::get('/reporte-Extra-Ins', function () {
-    return view('extrlReport');
-});
+    Route::get('/reporte-EAM', function () {
+        return view('adrMed');
+    });
 
-Route::get('/acci-Mejora', function () {
-    return view('ImprovActions');
-});
+    Route::get('/clasi-Rep-Intra', function () {
+        return view('classyIntraInstRep');
+    });
 
-Route::get('/consu-Parame', function () {
-    return view('qryConfig');
-});
+    Route::get('/ae-Adversos', function () {
+        return view('AdverEventsAnaly');
+    });
+
+    Route::get('/reporte-Extra-Ins', function () {
+        return view('extrlReport');
+    });
+
+    Route::get('/acci-Mejora', function () {
+        return view('ImprovActions');
+    });
+
+    Route::get('/consu-Parame', function () {
+        return view('qryConfig');
+    });
 
 
-Route::get('/info-Gral', function () {
-    return view('genInfo');
-});
+    Route::get('/info-Gral', function () {
+        return view('genInfo');
+    });
 
-Route::get('/pista-Aud', function () {
-    return view('auditTrail');
-});
+    Route::get('/pista-Aud', function () {
+        return view('auditTrail');
+    });
 
-Route::get('/tecno-Vig', function () {
-    return view('techVigilance');
-});
+    Route::get('/tecno-Vig', function () {
+        return view('techVigilance');
+    });
 
-Route::get('/registrar', function () {
-    return view('UserReg');
-});
+    Route::get('/registrar', function () {
+        return view('UserReg');
+    });
 
-Route::get('/cambiar-Contra', function () {
-    return view('ChangePwd');
-});
+    Route::get('/cambiar-Contra', function () {
+        return view('ChangePwd');
+    });
 
-Route::get('/mas-Conf', function () {
-    return view('moreSettings');
-});
+    Route::get('/mas-Conf', function () {
+        return view('moreSettings');
+    });
 
-Route::get('/elim-Datos', function () {
-    return view('dataDeletion');
+    Route::get('/elim-Datos', function () {
+        return view('dataDeletion');
+    });
+
 });

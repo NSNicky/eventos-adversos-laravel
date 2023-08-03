@@ -10376,8 +10376,8 @@ a:focus {
 .sidebar .nav-item .collapse .collapse-inner,
 .sidebar .nav-item .collapsing .collapse-inner {
   padding: .5rem 0;
-  min-width: 10rem;
-  font-size: 0.85rem;
+  min-width: 12rem;
+  font-size: 1rem;
   margin: 0 0 1rem 0;
 }
 
@@ -10871,8 +10871,8 @@ a:focus {
 
 .bg-login-image {
   background: url("../img/logoblanco.png");
-  background-position: center;
   background-size: cover;
+  height: 30em;
 }
 
 .bg-register-image {
@@ -11292,5 +11292,9 @@ body.sidebar-toggled footer.sticky-footer {
 .left-bar-custom {
   Background-image: linear-gradient(180deg,#4edf74 10%,#2643d4 100%) !important;
 
+}
+
+.container-interno{
+  margin: 3em;
 }
 

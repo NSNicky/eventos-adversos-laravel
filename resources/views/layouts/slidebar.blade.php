@@ -38,7 +38,9 @@
             <div class="bg-white py-2 collapse-inner rounded">
 
                 <a href="/reporte-EAM">Reporte De Eventos Adversos A Medicamentos</a>
+                
                 <a href="/reporte-ADR">Reporte De Eventos Adversos</a>
+
             </div>
         </div>
     </li>
