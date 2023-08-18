@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\UserLogin;
 use App\Http\Middleware\UserAuth;
+use App\Http\Controllers\EventosAdversosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,10 @@ Route::middleware([UserLogin::class])->group(function () {
     Route::get('/inicio', function () {
         return view('home');
     });
+
+    Route::get('/reporte-ADR', [EventosAdversosController::class, 'index'])->name('eventos.index');
+    Route::post('/eventos/consultar', [EventosAdversosController::class, 'consultar'])->name('eventos.consultar');
+    Route::get('/eventos/{id}', [EventosAdversosController::class, 'detalle'])->name('eventos.detalle');
 
     Route::get('/reporte-EAM', function () {
         return view('adrMed');
